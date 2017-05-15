@@ -1,0 +1,23 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Regex {
+	public static void main(String[] args) {
+		//vertex{id: "0",xPos: "-48.62304862717076",yPos: "-8.859780913382075",zPos: "-107.94486655853689",color: "#009669"}
+		Pattern pattern = Pattern.compile("vertex\\{id:\"[0-9]+\","
+				+ "xPos:\"(-)[0-9]*.[0-9]+\","
+				+ "yPos:\"(-)[0-9]*.[0-9]+\","
+				+ "zPos:\"(-)[0-9]*.[0-9]+\",");
+				//+ "color:\"#[0-9A-Fa-f]{6}?\"");
+		//String s  = "vertex{id:1}";
+		Matcher m = pattern.matcher("vertex{id:\"1\","
+				+ "xPos:\"-48.62304862717076\","
+				+ "yPos:\"-8.859780913382075\","
+				+ "zPos:\"-107.94486655853689\","
+				+ "color:\"#0099AA\"}");
+		if(m.matches()) 
+			System.out.println("Match!");
+		else 
+			System.out.println("No Match!");
+	}
+}

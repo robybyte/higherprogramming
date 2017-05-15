@@ -1,0 +1,14 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Regex {
+	public static void main(String[] args) {
+		Pattern pattern = Pattern.compile("vertex\\{id:\"[0-9]+\"");
+		String s  = "vertex{id:1}";
+		Matcher m = pattern.matcher("vertex{id:\"1\"");
+		if(m.matches()) 
+			System.out.println("Match!");
+		else 
+			System.out.println("No Match!");
+	}
+}

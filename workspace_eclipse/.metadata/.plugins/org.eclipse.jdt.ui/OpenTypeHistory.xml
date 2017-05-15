@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=HoehereProgrammierungP1/src&lt;hp.simulation{Scenario.java[Scenario" modifiers="513" timestamp="1493219648000"/>
+<typeInfo handle="=HoehereProgrammierungP1/src&lt;hp.simulation{SchedulingStrategy.java[SchedulingStrategy" modifiers="513" timestamp="1493219648000"/>
+<typeInfo handle="=HoehereProgrammierungP1/src&lt;hp.simulation{Resource.java[Resource" modifiers="513" timestamp="1493898816000"/>
+<typeInfo handle="=HoehereProgrammierungP1/\/usr\/lib\/jvm\/java-8-openjdk-amd64\/jre\/lib\/rt.jar&lt;javax.management(RuntimeErrorException.class[RuntimeErrorException" modifiers="33" timestamp="1485187082000"/>
+<typeInfo handle="=HoehereProgrammierungP1/\/usr\/lib\/jvm\/java-8-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1485187082000"/>
+<typeInfo handle="=HoehereProgrammierungP1/\/usr\/lib\/jvm\/java-8-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.lang(IndexOutOfBoundsException.class[IndexOutOfBoundsException" modifiers="33" timestamp="1485187082000"/>
+<typeInfo handle="=HoehereProgrammierungP1/\/usr\/lib\/jvm\/java-8-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1485187082000"/>
+<typeInfo handle="=HoehereProgrammierungP1/src&lt;hp.simulation.queueset{QueueSetByArray.java[QueueSetByArray" modifiers="1" timestamp="1493901024000"/>
+</typeInfoHistroy>

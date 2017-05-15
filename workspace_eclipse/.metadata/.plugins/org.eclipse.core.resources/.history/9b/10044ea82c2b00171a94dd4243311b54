@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package hp.simulation.crossing;
+
+import hp.simulation.queueset.QueueSet;
+
+/**
+ * @author rgn
+ * TODO fix it
+ */
+public enum Direction {
+	SOUTH, WEST, NORD, EAST;
+	
+	private Direction(QueueSet queue) {
+		
+	}
+}

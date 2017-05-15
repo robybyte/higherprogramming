@@ -1,0 +1,5 @@
+vertex{id: "0000", xPos: "10", yPos: "5", zPos: "15", color: "#6611ff"} 
+vertex{id: "1001", xPos: "10", yPos: "15", zPos: "5", color: "#1166ff"}
+vertex{id: "2002", xPos: "5", yPos: "15", zPos: "10", color: "#66ff11"}
+edge{from: "0000", to: "2002", color: "#554411"}
+edge{from: "2002", to: "1001", color: "#114455"}
