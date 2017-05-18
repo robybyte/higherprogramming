@@ -24,13 +24,22 @@ import java.util.regex.Pattern;
  * @author Sie
  */
 public class FileControl {
-    
+
     private final Graph graph;
-    
+    private static final Pattern patternKnoten = Pattern.compile("vertex\\{id:\"([0-9]+)\","
+            + "xPos:\"([-]?[0-9]+)\","
+            + "yPos:\"([-]?[0-9]+)\","
+            + "zPos:\"([-]?[0-9]+)\","
+            + "color:\"(#[0-9A-Fa-f]{6}?)\"\\}");
+
+    private static final Pattern patternKante = Pattern.compile("edge\\{from:\"([0-9]+)\","
+            + "to:\"([0-9]+)\","
+            + "color:\"(#[0-9A-Fa-f]{6}?)\"\\}");
+
     public FileControl(Graph graph) {
         this.graph = graph;
     }
-    
+
     public void saveFile(File file) throws FileSaveException {
         System.out.println(file.getPath());
         String out = "";
@@ -39,9 +48,9 @@ public class FileControl {
             for (Vertex v : graph.getVertices()) {
                 // vertex{id: "0000", xPos: "10", yPos: "5", zPos: "15", color: "#6611ff"} 
                 out = "vertex{id:\"" + v.id + "\","
-                        + "xPos:\"" + (int)v.getX() + "\","
-                        + "yPos:\"" + (int)v.getY() + "\","
-                        + "zPos:\"" + (int)v.getZ() + "\","
+                        + "xPos:\"" + (int) v.getX() + "\","
+                        + "yPos:\"" + (int) v.getY() + "\","
+                        + "zPos:\"" + (int) v.getZ() + "\","
                         + "color:\"" + v.getColor() + "\"}";
                 fw.write(out + "\n");
             }
@@ -56,43 +65,36 @@ public class FileControl {
         } catch (IOException ex) {
             Logger.getLogger(FileControl.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }
-    
+
     public void openFile(File file) throws FileOpenException {
         System.out.println(file.getPath());
         HashMap<Integer, Vertex> hMap = new HashMap<>();
-        
-        Pattern patternKnoten = Pattern.compile("vertex\\{id:\"([0-9]+)\","
-                + "xPos:\"([-]?[0-9]+)\","
-                + "yPos:\"([-]?[0-9]+)\","
-                + "zPos:\"([-]?[0-9]+)\","
-                + "color:\"(#[0-9A-Fa-f]{6}?)\"\\}");
-        
-        Pattern patternKante = Pattern.compile("edge\\{from:\"([0-9]+)\","
-                + "to:\"([0-9]+)\","
-                + "color:\"(#[0-9A-Fa-f]{6}?)\"\\}");
+
         Matcher m1 = null;
         Matcher m2 = null;
         String line = "";
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while (br.ready()) {
-                
+
                 line = br.readLine();
                 System.out.println("Line: " + line);
                 m1 = patternKnoten.matcher(line);
-                m2 = patternKante.matcher(line);
+
                 if (m1.matches()) {
                     hMap.put(Integer.parseInt(m1.group(1)),
                             graph.addVertex(Integer.parseInt(m1.group(2)),
                                     Integer.parseInt(m1.group(3)),
                                     Integer.parseInt(m1.group(4)),
                                     m1.group(5)));
-                }
-                if(m2.matches()) {
-                    graph.addEdge(hMap.get(Integer.parseInt(m2.group(1))), 
-                            hMap.get(Integer.parseInt(m2.group(2))),
-                            m2.group(3));
+                } else {
+                    m2 = patternKante.matcher(line);
+                    if (m2.matches()) {
+                        graph.addEdge(hMap.get(Integer.parseInt(m2.group(1))),
+                                hMap.get(Integer.parseInt(m2.group(2))),
+                                m2.group(3));
+                    }
                 }
             }
             br.close();
@@ -103,5 +105,5 @@ public class FileControl {
 
         graph.update();
     }
-    
+
 }

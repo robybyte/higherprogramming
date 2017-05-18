@@ -42,7 +42,7 @@ public class TokenThread extends Thread {
                 }
                 if (!gotResourceZ) {
                     while (!z.getResource(5000)) {
-                        z.freeResource();
+                        //z.freeResource();
                         z = graph.getRandomNeighbour(v);
                     }
                     e = graph.getEdge(v, z);

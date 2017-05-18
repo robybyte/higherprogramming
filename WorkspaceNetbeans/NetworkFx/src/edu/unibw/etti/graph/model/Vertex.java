@@ -135,13 +135,18 @@ public class Vertex extends Observable {
             return true;
         } else {
             wait(maxWaitingTime);
-            return false;
+            if (free) {
+                free = false;
+                return true;
+            } else {
+                return false;
+            }
         }
     }
-    
+
     public synchronized void freeResource() {
-        notifyAll();
         free = true;
+        notifyAll();
     }
     // TODO Aufgabe c, h, i
 }
