@@ -1,8 +1,6 @@
 # higherprogramming
 
-Erstes Praktikum abgeschlossen
+Abgeschlossen: 
 
-Zweites Praktikum (User Threads, Files, Hashmap) fertig Programmiert. 
-Abgabe erfolgt demnächst.
 
 
