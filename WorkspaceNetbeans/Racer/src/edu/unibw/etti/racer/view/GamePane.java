@@ -1,7 +1,8 @@
-package edu.unibw.etti.racer.controller;
+package edu.unibw.etti.racer.view;
 
 import edu.unibw.etti.racer.controller.GameControl;
-import edu.unibw.etti.racer.controller.StartPauseButton;
+import edu.unibw.etti.racer.controller.GameControl;
+import edu.unibw.etti.racer.view.StartPauseButton;
 import edu.unibw.etti.racer.view.StreetPane;
 import edu.unibw.etti.racer.handler.MoveCarHandler;
 import edu.unibw.etti.racer.view.ScoreLable;

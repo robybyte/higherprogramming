@@ -1,6 +1,6 @@
 package edu.unibw.etti.racer;
 
-import edu.unibw.etti.racer.controller.GamePane;
+import edu.unibw.etti.racer.view.GamePane;
 import edu.unibw.etti.racer.controller.GameControl;
 import edu.unibw.etti.racer.controller.ObstacleArrayList;
 import edu.unibw.etti.racer.model.Score;

@@ -1,5 +1,6 @@
-package edu.unibw.etti.racer.controller;
+package edu.unibw.etti.racer.view;
 
+import edu.unibw.etti.racer.controller.GameControl;
 import edu.unibw.etti.racer.controller.GameControl;
 import java.util.Observable;
 import java.util.Observer;

@@ -1,7 +1,7 @@
 package edu.unibw.etti.racer.handler;
 
 import edu.unibw.etti.racer.controller.GameControl;
-import edu.unibw.etti.racer.controller.StartPauseButton;
+import edu.unibw.etti.racer.view.StartPauseButton;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;

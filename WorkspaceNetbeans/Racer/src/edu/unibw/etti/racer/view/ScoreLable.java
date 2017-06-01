@@ -10,7 +10,6 @@ import edu.unibw.etti.racer.model.Score;
 import java.util.Observable;
 import java.util.Observer;
 import javafx.application.Platform;
-import javafx.beans.InvalidationListener;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -49,7 +48,9 @@ public class ScoreLable extends Label implements Observer {
                     alter.setHeaderText("Gameover");
                     alter.setGraphic(new ImageView(new Image(Configuration.POINT_FILE)));
                     alter.showAndWait();
+                    output = "";
                 }
+                
             }
         });
         

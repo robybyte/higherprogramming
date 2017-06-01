@@ -1,7 +1,5 @@
 package edu.unibw.etti.racer.controller;
 
-import edu.unibw.etti.racer.controller.ObstaclesThread;
-import edu.unibw.etti.racer.controller.ObstacleArrayList;
 import edu.unibw.etti.racer.model.Score;
 import edu.unibw.etti.racer.model.Car;
 import java.util.Observable;

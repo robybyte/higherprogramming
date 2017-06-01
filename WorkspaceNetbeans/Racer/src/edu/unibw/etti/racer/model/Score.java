@@ -48,6 +48,8 @@ public class Score extends Observable{
         points = 0;
         lives = Configuration.INITIAL_LIVES;
         level = 0;
+        setChanged();
+        notifyObservers();
     }
 
 }
